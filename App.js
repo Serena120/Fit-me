@@ -5,11 +5,9 @@ import React, {useState, useEffect} from 'react';
 import { FitnessContext } from "./Context";
 import {firebase} from "./config";
 
-
 export default function App() {
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState(null);
-
   function onAuthStateChanged(user) {
     setUser(user);
     if (initializing) setInitializing(false);
